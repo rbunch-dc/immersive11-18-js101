@@ -13,7 +13,48 @@
         // })
 
         function roll(){
-            console.log("User rolled")
+            // console.log("User rolled")
+            // EVERYTHING belongs to the window.
+            // you don't ever have to use window. because it's already assumed
+            // console.log(window)
+            // window.alert("I'm an alert box!")
+            // is the same as...
+            // alert("I'm an alert box!")
+            // console.log(window.document);
+            // .log on an html "thing" will show you html
+            // .dir on an html "thing" will show you the JS object
+            // console.log(document);
+            // console.dir(document);
+            // console.dir(document.doctype);
+            // console.dir(document.body);
+
+            // get a random number betweewn 1 and 6 for each die
+            var rand1 = Math.ceil(Math.random() * 6);
+            var rand2 = Math.ceil(Math.random() * 6);
+            // console.log(rand1);
+
+            // the dice images are dN.gif. we have 2 random numbers for the N
+            // First... get the dice html thing
+            var dice = document.getElementById('dice');
+            // var dice = document.querySelector('#dice');
+            console.dir(dice)
+            var die1 = dice.children[0];
+            var die2 = dice.children[1];
+            die1.src = `dragon-assets/d${rand1}.gif`;
+            die2.src = `dragon-assets/d${rand2}.gif`;
+            die2.src = 'dragon-assets/d'+rand2+'.gif';
+
+            if(rand1 + rand2 > 8){
+                console.log("You won");
+                var dragonDiv = document.getElementById('dragon');
+                dragonDiv.children[0].src= "https://upload.wikimedia.org/wikipedia/commons/7/74/Slain_dragon.jpg";
+                // dragonDiv.children[0].style.height = "200px"
+                dragonDiv.children[0].style.width = "200px"
+            }else{
+                console.log("You lost");
+            }
+
+
         }
         
     </script>
