@@ -66,6 +66,44 @@ and changable only to that function and its child functions -->
 
 
 
+        // HOISTING
+        // Anytime you have the word var, Javascript will take
+        // the var and put it at the top of the function/global
+        // where you like it or not
+
+    // var q = 1;
+    // function p(){
+    //     q++
+    //     console.log(q) // log global, 1
+    //     var q = 3;
+    //     console.log(q)
+    // }
+    // p();
+
+    // in addition to var, JS got a facelift in 2015 that added
+    // "let" and "const"
+    // let + const = no more var
+    // let is a block level variable
+    // it lives for as long as the {} it's inside of do
+
+    // var i
+    for(var i = 0; i < 10; i++){
+
+    }
+    console.log(i);
+
+    // for(let j = 0; j < 10; j++){
+        
+    // }
+    // console.log(j)
+
+    // for(const k = 0; k < 10; k++){
+
+    // }
+
+    const playerName = prompt("What is your name?");
+    playerName = "Joe"
+
 
 </script>
 
