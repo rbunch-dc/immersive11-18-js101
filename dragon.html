@@ -47,6 +47,7 @@
             if(rand1 + rand2 > 8){
                 console.log("You won");
                 var dragonDiv = document.getElementById('dragon');
+                dragonDiv.children[0].innerHTML = "<img src='https://upload.wikimedia.org/wikipedia/commons/7/74/Slain_dragon.jpg'>";
                 dragonDiv.children[0].src= "https://upload.wikimedia.org/wikipedia/commons/7/74/Slain_dragon.jpg";
                 // dragonDiv.children[0].style.height = "200px"
                 dragonDiv.children[0].style.width = "200px"
